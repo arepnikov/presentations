@@ -1,0 +1,3198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section ><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+
+
+
+## Substitution
+
+"the use of one person or thing instead of another" 	
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## Sensory Substitution
+
+### `Braille`
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/braille.jpeg" alt="" style="width: 800px"></img></p>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## Sensory Substitution
+
+### `Eagleman vest`
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/eaglema-vast.webp" alt="" ></img></p>
+
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## Sensory Substitution
+
+For Brain it doesn't matter was text read through 
+<!-- .element: class="fragment" data-fragment-index="1" -->
+eyes or fingers
+<!-- .element: class="fragment" data-fragment-index="1" -->
+main are data it received
+<!-- .element: class="fragment" data-fragment-index="2" -->
+Please keep it mind
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 419.5px; height: 0px; min-height: 0px; width: 1389px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+### `The Doctrine`
+### `of Useful Objects`
+###### `in practice ;)`
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 755.1px; height: 83.9px; min-height: 83.9px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+*Alexander Repnikov*
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## Eventide project
+
+- Event Sourcing toolkit
+<!-- .element: class="fragment" data-fragment-index="1" -->
+- Knowledge and philosophy of programming
+<!-- .element: class="fragment" data-fragment-index="2" -->
+	- Amazing community (on Slack)
+<!-- .element: class="fragment" data-fragment-index="3" -->
+	- The Doctrine of Useful Object
+<!-- .element: class="fragment" data-fragment-index="4" -->
+
+<div class="reset-margin" style="position: absolute; left: 138.9px; top: 251.70000000000002px; height: 419.5px; min-height: 419.5px; width: 833.4000000000001px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/image-yt-wroclove-bellware.png" alt="" style="width: 800px" class="fragment" data-fragment-index="5"></img></p>
+
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 251.70000000000002px; height: 419.5px; min-height: 419.5px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/qrcode-yt-wroclove-bellware.png" alt="" class="fragment" data-fragment-index="5"></img></p>
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+#### `What the doctrine is about?`
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 419.5px; min-height: 419.5px; width: 1389px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+- Take multiple patters <!-- .element: style="margin: 0; font-size: 26px" class="fragment" data-fragment-index="1" --> 
+- Apply to your code <!-- .element: style="margin: 0; font-size: 26px" class="fragment" data-fragment-index="2" -->
+- Result => well maintainable code/class <!-- .element: style="margin: 0; font-size: 26px" class="fragment" data-fragment-index="3" -->
+- Describe your good quality class with criterias it mets <!-- .element: style="margin: 0; font-size: 26px" class="fragment" data-fragment-index="4" -->
+- Use these criterias to create another class <!-- .element: style="margin: 0; font-size: 26px" class="fragment" data-fragment-index="5" -->
+- New class will be compliant with the patters you used <!-- .element: style="margin: 0; font-size: 26px" class="fragment" data-fragment-index="6" -->
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+
+### Doctrine 
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/doctrine-text.png" alt="" ></img></p>
+
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+
+### A useful object: 
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-object-criteria.png" alt="" ></img></p>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+### A useful object: 
+<div class="" style="opacity: 0.3" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-object-criteria.png" alt="" ></img></p>
+
+</div>
+
+<div class="reset-margin flex-even" style="position: absolute; left: 69.45px; top: 100.68px; height: 167.8px; min-height: 167.8px; width: 1389px; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-1.png" alt="" ></img></p>
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+### A useful object: 
+<div class="" style="opacity: 0.3" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-object-criteria.png" alt="" ></img></p>
+
+</div>
+
+<div class="reset-margin flex-even" style="position: absolute; left: 69.45px; top: 134.24px; height: 167.8px; min-height: 167.8px; width: 1389px; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-2.png" alt="" ></img></p>
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+### A useful object: 
+<div class="" style="opacity: 0.3" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-object-criteria.png" alt="" ></img></p>
+
+</div>
+
+<div class="reset-margin flex-even" style="position: absolute; left: 69.45px; top: 234.92000000000002px; height: 167.8px; min-height: 167.8px; width: 1389px; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-3.png" alt="" ></img></p>
+
+</div>
+
+
+<aside class="notes"><ol start="4">
+<li>no logic inside initializer: means we won&#39;t want construct things inside of an initializer</li>
+</ol>
+<p><a href="https://pl.wikipedia.org/wiki/Odwr%C3%B3cenie_sterowania">https://pl.wikipedia.org/wiki/Odwr%C3%B3cenie_sterowania</a></p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+### A useful object: 
+<div class="" style="opacity: 0.3" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-object-criteria.png" alt="" ></img></p>
+
+</div>
+
+<div class="reset-margin flex-even" style="position: absolute; left: 69.45px; top: 285.26px; height: 167.8px; min-height: 167.8px; width: 1389px; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-4.png" alt="" ></img></p>
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+### A useful object: 
+<div class="" style="opacity: 0.3" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-object-criteria.png" alt="" ></img></p>
+
+</div>
+
+<div class="reset-margin flex-even" style="position: absolute; left: 69.45px; top: 335.6px; height: 167.8px; min-height: 167.8px; width: 1389px; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-5.png" alt="" ></img></p>
+
+</div>
+
+
+<aside class="notes"><p>Now when you learned everything and memorized all the rules let&#39;s jump into coding</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+### The Doctrine of Useful Objects
+
+
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/doctrine-qrcode.png" alt="" ></img></p>
+
+
+
+
+
+<aside class="notes"><p><a href="http://docs.eventide-project.org/user-guide/useful-objects.html#overview">http://docs.eventide-project.org/user-guide/useful-objects.html#overview</a></p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Hardcoded version`
+
+
+
+<div class="reset-margin" style="transform: rotate(20deg); position: absolute; left: 486.15000000000003px; top: 293.65000000000003px; height: 700px; min-height: 700px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/bear_fire.jpeg" alt="" class="fragment" data-fragment-index="3"></img></p>
+
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+	class SomeController
+	  def action
+	    create_purchase = CreatePurchase.new
+	    create_purchase.call
+	  end
+	end
+```
+
+```ruby
+	class CreatePurchase
+	  def call
+	    send_mail = SendMail.new
+	    send_mail.call
+	  end
+	end
+```
+
+```ruby
+	class SendMail
+	  def call
+	    # sends an email
+	  end
+	end
+ ```
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Issues`
+
+- because `SendMail` is hardcoded  you have no choice but to mock it in test. 
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+- problem with Mocks is that they live cycle is completely independent from live cycle of your code
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+	- test may be green, while production explodes
+<!-- .element: class="fragment" data-fragment-index="3" -->
+</div>
+
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency injection`
+
+
+
+<split no-margin gap="1" wrap="2">
+
+```ruby
+class SomeController
+  def action
+	create_purchase = CreatePurchase.new
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+    class SomeController
+      def action
+=>      send_mail = SendMail.new
+        create_purchase = 
+   	   CreatePurchase.new(send_mail)
+   	  
+   	 create_purchase.call
+      end
+    end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class CreatePurchase
+  def call
+    send_mail = SendMail.new           <=======
+	send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class CreatePurchase
+  def initializer(send_mail)
+	@send_mail = send_mail
+  end
+  
+  def call
+	@send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+</split>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency injection`
+
+
+
+
+
+<split no-margin gap="1" wrap="2">
+
+```ruby
+class SomeController
+  def action
+	create_purchase = CreatePurchase.new
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	create_purchase = 
+	  CreatePurchase.new(send_mail)
+	  
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class CreatePurchase
+  def call
+    send_mail = SendMail.new
+	send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class CreatePurchase
+  def initializer(send_mail)
+	@send_mail = send_mail
+  end
+  
+  def call
+	@send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+</split>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency injection`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	create_purchase = 
+	  CreatePurchase.new(send_mail)
+	  
+	create_purchase.call
+  end
+end
+```
+
+```ruby
+class CreatePurchase
+  def initializer(send_mail)
+	@send_mail = send_mail
+  end
+  
+  def call
+	@send_mail.call
+  end
+end
+```
+
+```ruby
+class SendMail; def call; end end
+```
+
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Issues`
+
+- Why should caller know about our dependencies??
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+- Also it requires to add dependency as an argument to initializer
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+	- it is incompliant with p.5 & p.6
+<!-- .element: class="fragment" data-fragment-index="3" -->
+</div>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency injection`
+
+
+<div class="reset-margin" style="opacity: 0.3; position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	create_purchase = 
+	  CreatePurchase.new(send_mail)
+	  
+	create_purchase.call
+  end
+end
+```
+
+```ruby
+class CreatePurchase
+  def initializer(send_mail)
+	@send_mail = send_mail
+  end
+  
+  def call
+	@send_mail.call
+  end
+end
+```
+
+```ruby
+class SendMail; def call; end end
+```
+
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Issues` <!-- .element: style="opacity: 0.3" -->
+
+- Why should caller know about our dependencies??<!-- .element: style="opacity: 0.3" -->
+- Also it requires to add dependency as an argument to initializer<!-- .element: style="opacity: 0.3" -->
+
+	- it is incompliant with p.5 & p.6<!-- .element: style="opacity: 0.3" -->
+	- initializer should received only values, which characterized it
+</div>
+
+<div class="reset-margin" style="opacity: 1.0; transform: rotate(-15deg); position: absolute; left: 0px; top: 335.6px; height: 167.8px; min-height: 167.8px; width: 1389px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-p5-p6.png" alt="" ></img></p>
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency injection`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	create_purchase = 
+	  CreatePurchase.new(send_mail)
+	  
+	create_purchase.call
+  end
+end
+```
+
+```ruby
+class CreatePurchase
+  def initializer(send_mail)
+	@send_mail = send_mail
+  end
+  
+  def call
+	@send_mail.call
+  end
+end
+```
+
+```ruby
+class SendMail; def call; end end
+```
+
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `More issues`
+
+- It requires a lot of setup for Unit test
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+- In general it is not convenient
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+	- Yes, it might not be a good argument
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+</div>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency injection`
+
+
+<div class="reset-margin" style="opacity: 0.3; position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	create_purchase = 
+	  CreatePurchase.new(send_mail)
+	  
+	create_purchase.call
+  end
+end
+```
+
+```ruby
+class CreatePurchase
+  def initializer(send_mail)
+	@send_mail = send_mail
+  end
+  
+  def call
+	@send_mail.call
+  end
+end
+```
+
+```ruby
+class SendMail; def call; end end
+```
+
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="opacity: 0.3; position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `More issues`
+
+- It requires a lot of setup for Unit test
+- In general it is not convenient
+	- Yes, it might not be a good argument
+
+<br>
+<br>
+
+</div>
+
+<div class="reset-margin" style="transform: rotate(-15deg); position: absolute; left: 0px; top: 209.75px; height: 419.5px; min-height: 419.5px; width: 833.4000000000001px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+# `Bear with me`
+</div>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency injection`
+
+
+<div class="reset-margin" style="opacity: 0.3; position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	create_purchase = 
+	  CreatePurchase.new(send_mail)
+	  
+	create_purchase.call
+  end
+end
+```
+
+```ruby
+class CreatePurchase
+  def initializer(send_mail)
+	@send_mail = send_mail
+  end
+  
+  def call
+	@send_mail.call
+  end
+end
+```
+
+```ruby
+class SendMail; def call; end end
+```
+
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="opacity: 0.3; position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `More issues`
+
+- It requires a lot of setup for Unit test
+- In general it is not convenient
+	- Yes, it might not be a good argument
+
+<br>
+<br>
+
+</div>
+<div class="reset-margin" style="position: absolute; left: 555.5999999999999px; top: 209.75px; height: 419.5px; min-height: 419.5px; width: 833.4000000000001px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/bear_with_me.jpeg" alt="" style="width: 700px"></img></p>
+
+</div>
+
+<div class="reset-margin" style="transform: rotate(-15deg); position: absolute; left: 0px; top: 209.75px; height: 419.5px; min-height: 419.5px; width: 833.4000000000001px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+# `Bear with me. Please!` <!-- .element: style="background-color: red" -->
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency through setter`
+
+
+
+
+
+<split no-margin gap="1" wrap="2">
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	
+	create_purchase = 
+	  CreatePurchase.new(send_mail)
+	  
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	
+	create_purchase = CreatePurchase.new
+	create_purchase.send_mail = send_mail
+	  
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+
+```ruby
+class CreatePurchase
+  def initializer(send_mail)
+	@send_mail = send_mail
+  end
+  
+  def call
+	@send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+
+
+  def call
+	send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+</split>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency through setter`
+
+
+
+
+
+<split no-margin gap="1" wrap="2">
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	
+	create_purchase = 
+	  CreatePurchase.new(send_mail)
+	  
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	
+	create_purchase = CreatePurchase.new
+	create_purchase.send_mail = send_mail
+	  
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+
+```ruby
+class CreatePurchase
+  def initializer(send_mail)
+	@send_mail = send_mail
+  end
+  
+  def call
+	@send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+
+
+  def call
+	send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+</split>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency through setter`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	
+	create_purchase = CreatePurchase.new
+	create_purchase.send_mail = send_mail
+	
+	create_purchase.call
+  end
+end
+```
+
+```ruby
+class CreatePurchase
+  attr_accesor :send_mail
+  
+  def call
+	send_mail.call
+  end
+end
+```
+
+```ruby
+class SendMail; def call; end end
+```
+
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Issues`
+
+- Caller still knows about our dependencies...
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+- we solved problem with initializer and his arguments
+<!-- .element: class="fragment" data-fragment-index="2" -->
+	- so now it is compliant with p.5
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency through setter`
+
+
+<div class="reset-margin" style="opacity: 0.3; position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	
+	create_purchase = CreatePurchase.new
+	create_purchase.send_mail = send_mail
+	
+	create_purchase.call
+  end
+end
+```
+
+```ruby
+class CreatePurchase
+  attr_accesor :send_mail
+  
+  def call
+	send_mail.call
+  end
+end
+```
+
+```ruby
+class SendMail; def call; end end
+```
+
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Issues`
+
+- Caller still knows about our dependencies...
+
+- we solved problem with initializer and his arguments
+	- so now it is compliant with p.5
+</div>
+
+<div class="reset-margin" style="opacity: 1.0; position: absolute; left: 0px; top: 427.89000000000004px; height: 167.8px; min-height: 167.8px; width: 1389px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-p-5.png" alt="" ></img></p>
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency through setter`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	
+	create_purchase = CreatePurchase.new
+	create_purchase.send_mail = send_mail
+	
+	create_purchase.call
+  end
+end
+```
+
+```ruby
+class CreatePurchase
+  attr_accesor :send_mail
+  
+  def call
+	send_mail.call
+  end
+end
+```
+
+```ruby
+class SendMail; def call; end end
+```
+
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Issues`
+
+- Caller still knows about our dependencies...
+
+- we solved problem with initializer and his arguments
+	- so now it is compliant with p.5
+
+- but it's still incompliant with p.6
+	- we are using outside mechanisms
+
+- end we made our solution incompliant with p.1
+<!-- .element: class="fragment" data-fragment-index="1" -->
+</div>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Dependency through setter`
+
+
+<div class="reset-margin" style="opacity: 0.3; position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	
+	create_purchase = CreatePurchase.new
+	create_purchase.send_mail = send_mail
+	
+	create_purchase.call
+  end
+end
+```
+
+```ruby
+class CreatePurchase
+  attr_accesor :send_mail
+  
+  def call
+	send_mail.call
+  end
+end
+```
+
+```ruby
+class SendMail; def call; end end
+```
+
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Issues`<!-- .element: style="opacity: 0.3" -->
+
+- Caller still knows about our dependencies...<!-- .element: style="opacity: 0.3" -->
+
+- we solved problem with initializer and his arguments<!-- .element: style="opacity: 0.3" -->
+	- so now it is compliant with p.5<!-- .element: style="opacity: 0.3" -->
+
+- but it's still incompliant with p.6<!-- .element: style="opacity: 0.3" -->
+	- we are using outside mechanisms<!-- .element: style="opacity: 0.3" -->
+
+- end we made our solution incompliant with p.1
+	- NoMethodError
+</div>
+
+<div class="reset-margin" style="opacity: 1.0; transform: rotate(-10deg); position: absolute; left: 0px; top: 335.6px; height: 167.8px; min-height: 167.8px; width: 1389px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/useful-1.png" alt="" ></img></p>
+
+</div>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Class method .build`
+
+
+
+
+
+<split no-margin gap="1" wrap="2">
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	
+	create_purchase = CreatePurchase.new
+	create_purchase.send_mail = send_mail
+	  
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class SomeController
+  def action
+    create_purchase = CreatePurchase.build
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+
+
+
+
+
+
+
+  def call
+	send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+  def self.build
+    instance = new
+    instance.send_mail = SendMail.new
+    
+    instance
+  end
+
+  def call
+	send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+</split>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Class method .build`
+
+
+
+
+
+<split no-margin gap="1" wrap="2">
+
+```ruby
+class SomeController
+  def action
+    send_mail = SendMail.new
+	
+	create_purchase = CreatePurchase.new
+	create_purchase.send_mail = send_mail
+	  
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class SomeController
+  def action
+    create_purchase = CreatePurchase.build
+	create_purchase.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+
+
+
+
+
+
+
+  def call
+	send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+  def self.build
+    instance = new
+    instance.send_mail = SendMail.new
+    
+    instance
+  end
+
+  def call
+	send_mail.call
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+```ruby
+class SendMail; def call; end end
+```
+<!-- .element: style="width: 48%; opacity: 0.5" -->
+
+</split>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Class method .build`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class SomeController
+  def action
+    create_purchase = CreatePurchase.build
+	create_purchase.call
+  end
+end
+```
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+  def self.build
+    instance = new
+    instance.send_mail = SendMail.new
+    
+    instance
+  end
+
+  def call
+	send_mail.call
+  end
+end
+```
+
+```ruby
+class SendMail; def call; end end
+```
+
+ 
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Achievements`
+
+- Caller doesn't know about our dependencies
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+- Class is able to create fully operational instance (.build method)
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+<br> 
+
+### `Remaining Issue`
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+- initialized instance still raises NoMethodError...
+<!-- .element: class="fragment" data-fragment-index="4" -->
+	- incompliant with p.1
+<!-- .element: class="fragment" data-fragment-index="5" -->
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Default value for dependency`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+  def self.build
+    instance = new
+    instance.send_mail = SendMail.new
+    
+    instance
+  end
+```
+
+```
+  def call
+	send_mail.call
+  end
+
+  def send_mail
+    @send_mail ||= SendMail.new
+  end
+end
+```
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Option ??`
+- assign an instance of our dependency by default
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+- it solves a problem with NoMethodError
+<!-- .element: class="fragment" data-fragment-index="2" -->
+	- but it is the same solution as Hardcoded version
+<!-- .element: class="fragment" data-fragment-index="3" -->
+	- so it has the same issues
+<!-- .element: class="fragment" data-fragment-index="4" -->
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Default value for dependency`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+  def self.build
+    instance = new
+    instance.send_mail = SendMail.new
+    
+    instance
+  end
+```
+
+```
+  def call
+	send_mail.call
+  end
+
+  def send_mail
+    @send_mail ||= ??????
+  end
+end
+```
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Opportunity`
+- idea to assign some instance by default is interesting
+<!-- .element: class="fragment" data-fragment-index="1" -->
+	- it solves an issue with NoMethodError
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+- but what is that instance??
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Default value for dependency`
+
+
+<div class="reset-margin" style="opacity: 0.3; position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+  def self.build
+    instance = new
+    instance.send_mail = SendMail.new
+    
+    instance
+  end
+```
+
+```
+  def call
+	send_mail.call
+  end
+
+  def send_mail
+    @send_mail ||= ??????
+  end
+end
+```
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Opportunity??`
+- idea to assign some instance by default is interesting<!-- .element: style="opacity: 0.1" -->
+	- it solves an issue with NoMethodError<!-- .element: style="opacity: 0.1" -->
+- but what is that instance??
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/bear_thinking.jpeg" alt="" style="width: 300px"></img></p>
+
+
+</div>
+
+<div class="reset-margin" style="transform: rotate(-15deg); position: absolute; left: 625.0500000000001px; top: 58.730000000000004px; height: 419.5px; min-height: 419.5px; width: 833.4000000000001px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+# `Hm...`
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Default value for dependency`
+
+
+<div class="reset-margin" style="opacity: 0.3; position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  attr_accessor :send_mail  
+
+  def self.build
+    instance = new
+    instance.send_mail = SendMail.new
+    
+    instance
+  end
+```
+
+```
+  def call
+	send_mail.call
+  end
+
+  def send_mail
+    @send_mail ||= ??????
+  end
+end
+```
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Opportunity`
+- idea to assign some instance by default is interesting<!-- .element: style="opacity: 0.3" -->
+	- it solves an issue with NoMethodError<!-- .element: style="opacity: 0.3" -->
+- but what is that instance??<!-- .element: style="opacity: 0.3" -->
+
+</div>
+
+
+<div class="reset-margin" style="transform: rotate(-15deg); position: absolute; left: 0px; top: 209.75px; height: 419.5px; min-height: 419.5px; width: 833.4000000000001px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+# `It sounds interesting!!!` <!-- .element: style="background-color: red" -->
+</div>
+
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 58.730000000000004px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/sneaky-emoticon.webp" alt="" ></img></p>
+
+</div>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Sensory Substitution example`
+
+For Brain it doesn't matter was text read through eyes or fingers
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Sensory Substitution example`
+
+For Brain it doesn't matter was text read through eyes or fingers
+
+
+<split no-margin gap="1" wrap="2">
+
+```ruby
+class Brain
+  def action
+    read_text = ReadText.build
+	read_text.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class ReadText
+  attr_accessor :data_source
+  
+  def self.build
+    instance = new
+    instance.data_source = EyesSource.new
+	instance
+  end
+  
+  def call
+    data_source.read_stream
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class EyesSource
+  def read_stream
+	# return text which I see
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class FingersSource
+  def read_stream
+	# return text which I feel
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.3" -->
+
+</split>
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Sensory Substitution example`
+
+For Brain it doesn't matter was text read through eyes or fingers
+
+
+<split no-margin gap="1" wrap="2">
+
+```ruby
+class Brain
+  def action
+    read_text = ReadText.build
+	read_text.call
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class ReadText
+  attr_accessor :data_source
+  
+  def self.build
+    instance = new
+    instance.data_source = FingersSource.new
+	instance
+  end
+  
+  def call
+    data_source.read_stream
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class EyesSource
+  def read_stream
+	# return text which I see
+  end
+end
+```
+<!-- .element: style="width: 48%; opacity: 0.3" -->
+
+```ruby
+class FingersSource
+  def read_stream
+	# return text which I feel
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+</split>
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Substitutions in programming`
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+- When two classes are the same from caller's point of view?
+
+
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+
+</split>
+</div>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Substitutions in programming`
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+- When two classes are the same from caller's point of view?
+<br>
+
+- same names of all public methods
+
+
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class Class_A
+  def method_one                          
+    ...
+  end
+  
+  
+  
+  
+  
+end
+```
+
+```ruby
+class Class_B
+  def method_one                          
+    ...
+  end
+  
+
+
+
+end
+```
+
+</split>
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Substitutions in programming`
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+- When two classes are the same from caller's point of view?
+<br>
+
+- same names of all public methods
+- each pair of methods have the same list of arguments
+
+
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class Class_A
+  def method_one                          
+    ...
+  end
+  
+  def method_two(a:, b:)
+    ...
+  end
+end
+```
+
+```ruby
+class Class_B
+  def method_one                          
+    ...
+  end
+  
+  def method_two(a:, b:)
+    ...
+  end
+end
+```
+
+</split>
+</div>
+
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Substitutions in programming`
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+- When two classes are the same from caller's point of view?
+<br>
+
+- same names of all public methods
+- each pair of methods have the same list of arguments
+- each pair of methods return the same types of values
+	- but values could be different
+<!-- .element: class="fragment" data-fragment-index="0" -->
+<br>
+
+#### `Class_A and Class_B could substitute each other`
+<!-- .element: style="background-color: #a5f2e7" class="fragment" data-fragment-index="1" -->
+
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="1" >
+
+```ruby
+class Class_A
+  def method_one                          
+    true
+  end
+  
+  def method_two(a:, b:)
+    :pen
+  end
+end
+```
+
+```ruby
+class Class_B
+  def method_one                          
+    false
+  end
+  
+  def method_two(a:, b:)
+    :pencil
+  end
+end
+```
+
+</split>
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Substitutions in programming`
+
+<split no-margin gap="1" wrap="2">
+
+```ruby
+class Class_A
+  def method_one
+    true
+  end
+  
+  def method_two(a:, b:)
+    :pen
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+```ruby
+class Class_B
+  def method_one
+    false
+  end
+  
+  def method_two(a:, b:)
+    :pencil
+  end
+  
+  def method_three(*args)
+    nil
+  end
+end
+```
+<!-- .element: style="width: 48%" -->
+
+<div class="block">
+
+- we can generalized this rules
+<!-- .element: class="fragment" data-fragment-index="1" -->
+- class can be a substitute of other class if it has methods with same names as another class
+<!-- .element: class="fragment" data-fragment-index="2" -->
+- which means that substitute could have more methods
+<!-- .element: class="fragment" data-fragment-index="3" -->
+</div>
+
+<!-- .element: style="width: 48%; font-size: 26px" -->
+
+<div class="block">
+
+###### `Class_B can be a substitute of Class_A`
+<!-- .element: style="background-color: #a5f2e7" class="fragment" data-fragment-index="4" -->
+###### `BUT Class_A cannot be a substitute of Class_B`
+<!-- .element: style="background-color: #ff4754" class="fragment" data-fragment-index="5" -->
+
+</div>
+
+<!-- .element: style="width: 48%" -->
+
+</split>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Production-like example`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+```
+
+```
+  ThirdPartyClientError = Class.new(RuntimeError)
+```
+<!-- .element: class="fragment" data-fragment-index="5" -->
+
+
+```
+
+  def call(user_id:, **params)
+    ppolicy = PurchasePolicy.new
+    return false unless policy.create_purchase?(user_id)
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+```
+
+    form = PurchaseForm::Build.call(user_id: user_id, **params)
+    return false unless form.valid?
+```
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+```
+
+    attributes = form.attributes
+    third_party_magic = ThirdParty::Client::UseMagic.new
+```
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+```
+    begin
+      ActiveRecord::Base.transaction do
+        PersistPurchase.call!(attributes)    
+        response = third_party_magic.call
+        raise ThirdPartyClientError unless response.success?
+        true
+      end
+    rescue ActiveRecord::RecordInvalid, ThirdPartyClientError
+      false
+    end
+```
+<!-- .element: class="fragment" data-fragment-index="4" -->
+
+```
+  end
+end
+```
+
+</split>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Production-like example`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  ThirdPartyClientError = Class.new(RuntimeError)
+
+  def call(user_id:, **params)
+    ppolicy = PurchasePolicy.new
+    return false unless policy.create_purchase?(user_id)
+
+    form = PurchaseForm::Build.call(user_id: user_id, **params)
+    return false unless form.valid?
+
+    attributes = form.attributes
+    third_party_magic = ThirdParty::Client::UseMagic.new
+```
+<!-- .element: style="opacity: 0.2" -->
+
+```
+    begin
+      ActiveRecord::Base.transaction do
+        PersistPurchase.call!(attributes)    
+        response = third_party_magic.call
+        raise ThirdPartyClientError unless response.success?
+        true
+      end
+    rescue ActiveRecord::RecordInvalid, ThirdPartyClientError
+      false
+    end
+```
+
+```
+  end
+end
+```
+<!-- .element: style="opacity: 0.3" -->
+
+</split>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Production-like example`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  ThirdPartyClientError = Class.new(RuntimeError)
+
+  def call(user_id:, **params)
+    ppolicy = PurchasePolicy.new
+    return false unless policy.create_purchase?(user_id)
+```
+<!-- .element: style="opacity: 0.3" -->
+
+```
+    form = PurchaseForm::Build.call(user_id: user_id, **params)
+    return false unless form.valid?
+
+    attributes = form.attributes
+    third_party_magic = ThirdParty::Client::UseMagic.new
+
+    begin
+      ActiveRecord::Base.transaction do
+```
+<!-- .element: style="opacity: 0.3" -->
+
+```
+        PersistPurchase.call!(attributes)    
+```
+
+```
+        response = third_party_magic.call
+        raise ThirdPartyClientError unless response.success?
+        true
+      end
+    rescue ActiveRecord::RecordInvalid, ThirdPartyClientError
+      false
+    end
+  end
+end
+```
+<!-- .element: style="opacity: 0.3" -->
+
+</split>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Production-like example`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  ThirdPartyClientError = Class.new(RuntimeError)
+
+  def call(user_id:, **params)
+    ppolicy = PurchasePolicy.new
+    return false unless policy.create_purchase?(user_id)
+```
+<!-- .element: style="opacity: 0.3" -->
+
+```
+    form = PurchaseForm::Build.call(user_id: user_id, **params)
+    return false unless form.valid?
+
+    attributes = form.attributes
+    third_party_magic = ThirdParty::Client::UseMagic.new
+
+    begin
+      ActiveRecord::Base.transaction do
+        PersistPurchase.call!(attributes)    
+```
+<!-- .element: style="opacity: 0.3" -->
+
+```
+        response = third_party_magic.call
+        raise ThirdPartyClientError unless response.success?
+        true
+```
+
+```
+      end
+    rescue ActiveRecord::RecordInvalid, ThirdPartyClientError
+      false
+    end
+  end
+end
+```
+<!-- .element: style="opacity: 0.3" -->
+
+</split>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Production-like example`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  ThirdPartyClientError = Class.new(RuntimeError)
+
+  def call(user_id:, **params)
+    ppolicy = PurchasePolicy.new
+    return false unless policy.create_purchase?(user_id)
+```
+<!-- .element: style="opacity: 0.3" -->
+
+```
+    form = PurchaseForm::Build.call(user_id: user_id, **params)
+    return false unless form.valid?
+
+    attributes = form.attributes
+    third_party_magic = ThirdParty::Client::UseMagic.new
+
+    begin
+      ActiveRecord::Base.transaction do
+        PersistPurchase.call!(attributes)    
+        response = third_party_magic.call
+        raise ThirdPartyClientError unless response.success?
+        true
+      end
+```
+<!-- .element: style="opacity: 0.3" -->
+
+```
+    rescue ActiveRecord::RecordInvalid, ThirdPartyClientError
+      false
+    end
+```
+
+```
+  end
+end
+```
+<!-- .element: style="opacity: 0.3" -->
+
+</split>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Production-like example`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  ThirdPartyClientError = Class.new(RuntimeError)
+
+  def call(user_id:, **params)
+    ppolicy = PurchasePolicy.new
+    return false unless policy.create_purchase?(user_id)
+
+    form = PurchaseForm::Build.call(user_id: user_id, **params)
+    return false unless form.valid?
+
+    attributes = form.attributes
+    third_party_magic = ThirdParty::Client::UseMagic.new
+```
+
+```
+
+    begin
+      ActiveRecord::Base.transaction do
+        PersistPurchase.call!(attributes)    
+        response = third_party_magic.call
+        raise ThirdPartyClientError unless response.success?
+        true
+      end
+    rescue ActiveRecord::RecordInvalid, ThirdPartyClientError
+      false
+    end
+  end
+end
+```
+
+</split>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Production-like example`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  attr_accessor :ppolicy, :form_builder, :third_party_magic, :persist_purchase
+
+  def self.build
+    ppolicy = PurchasePolicy.new
+    form_builder = PurchaseForm::Build.new
+    third_party_magic = ThirdParty::Client::UseMagic.new
+    persist_purchase = PersistPurchase.new
+  end
+```
+
+```
+
+  def call(user_id:, **params)
+    return false unless policy.create_purchase?(user_id)
+    form = form_builder.call(user_id: user_id, **params)
+    return false unless form.valid?
+```
+
+```
+    begin
+      ActiveRecord::Base.transaction do
+        persist_purchase.call!(form.attributes)    
+        response = third_party_magic.call
+        raise ThirdPartyClientError unless response.success?
+        true
+      end
+    rescue ActiveRecord::RecordInvalid, ThirdPartyClientError
+      false
+    end
+  end
+end
+```
+
+</split>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Production-like example`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  attr_writer :ppolicy, :form_builder, :third_party_magic, :persist_purchase
+
+  def self.build
+    third_party_magic = ThirdParty::Client::UseMagic.new
+  end
+```
+
+```
+
+  def call(user_id:, **params)
+    ...
+    begin
+      ActiveRecord::Base.transaction do
+        Purchase.create!(attributes)    
+        response = third_party_magic.call
+        raise ThirdPartyClientError unless response.success?
+        true
+      end
+```
+
+```
+    rescue ActiveRecord::RecordInvalid, ThirdPartyClientError
+      false
+    end
+  end
+  
+  def third_party_magic
+    @third_party_magic ||= ThirdParty::Client::UseMagic::Substitute.build
+  end
+end
+```
+
+</split>
+
+<div class="reset-margin" style="transform: rotate(10deg); position: absolute; left: 97.23px; top: 83.9px; height: 419.5px; min-height: 419.5px; width: 1389px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+## `It is an Useful Object!!!` <!-- .element: style="background-color: #3deb34" --> 
+</div><!-- .element: class="fragment" data-fragment-index="1" -->
+
+<div class="reset-margin" style="position: absolute; left: 416.70000000000005px; top: 335.6px; height: 419.5px; min-height: 419.5px; width: 1389px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/bear_win.jpeg" alt="" ></img></p>
+
+</div><!-- .element: class="fragment" data-fragment-index="1" -->
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `First Substitute`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class ThirdPart::Client::UseMagic
+  module Substitute
+    def self.build
+      UseMagic.new
+    end
+    
+    class UseMagic
+      def call                              
+        response
+      end
+```
+
+```
+
+      private
+      
+      def response                        
+        @response ||=    
+          Response.new(result: true)
+      end
+    end
+  end
+end
+```
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+  - it has all methods as UseMagic class
+  <!-- .element: class="fragment" data-fragment-index="1" -->
+  - methods have save arguments
+  <!-- .element: class="fragment" data-fragment-index="2" -->
+  - methods return same type of result
+  <!-- .element: class="fragment" data-fragment-index="3" -->
+
+## `Hurray!!! It's a substitute!!!`
+<!-- .element: class="fragment" data-fragment-index="4" -->
+</div>
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `More useful Substitute`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class ThirdPart::Client::UseMagic
+  module Substitute
+    def self.build
+      UseMagic.new
+    end
+    
+    class UseMagic
+      def call                              
+        response
+      end
+```
+
+```
+
+      def it_succeed
+        @response = 
+          Response.new(result: true)
+      end
+  
+	  def it_will_fail
+        @response = 
+          Response.new(result: false)
+      end
+```
+
+```  
+      def response                        
+        @response ||=    
+          Response.new(result: true)
+      end
+end
+```
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+- now we can decide will it be successful or not
+<!-- .element: class="fragment" data-fragment-index="1" -->
+- but it doesn't provide any telemetry
+<!-- .element: class="fragment" data-fragment-index="2" -->
+- so let's add them too
+<!-- .element: class="fragment" data-fragment-index="3" -->
+- oh and I'm assumed that we have Response implemented somewhere :)
+<!-- .element: class="fragment" data-fragment-index="4" -->
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `First Substitute`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class ThirdPart::Client::UseMagic
+  module Substitute
+    def self.build
+      UseMagic.new
+    end
+    
+    class UseMagic
+      attr_accessor :was_called
+      
+      def initialize
+        @was_called = false
+      end
+```
+
+```
+
+      def call                              
+        was_called = true
+        response
+      end
+      
+      def called?
+        was_called
+      end
+      ...
+end
+```
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class ThirdPart::Client::UseMagic
+      ...
+      
+      def response                        
+        @response ||=    
+          Response.new(result: true)
+      end
+```
+
+```
+
+      def it_succeed
+        @response = 
+          Response.new(result: true)
+      end
+  
+	  def it_will_fail
+        @response = 
+          Response.new(result: false)
+      end
+```
+
+```  
+      ...
+    end
+  end
+end
+
+
+```
+</split>
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `PurchasePolisy Substitute`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class PurchasePolicy
+  module Substitute
+    def self.build
+      PurchasePolicy.new
+    end
+    
+    class PurchasePolicy
+      attr_reader :invocations
+      
+      def initialize
+        @invocations = []
+        @result = true
+      end
+```
+
+```
+
+      def set_result(value)
+        @result = value
+      end 
+      ...
+end
+```
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class PurchasePolicy
+      ...
+      
+      def create_purchase?(user_id:)       
+        invocations << [
+          :create_purchase?, 
+          [{user_id: user_id}]
+        ]
+        @result
+      end
+```
+
+```
+
+      def called_with?(method_name, *args)
+        invocations.include?(
+          [method_name, *args]
+        )
+      end
+    end
+  end
+end  
+```
+</split>
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Production-like example (Again)`
+
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 833.4000000000001px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchase
+  def self.build
+    third_party_magic = 
+      ThirdParty::Client::UseMagic.new
+  end
+```
+
+```
+
+  def call(user_id:, **params)
+    ...
+  end
+  
+  def third_party_magic
+    @third_party_magic ||= 
+      ThirdParty::Client::UseMagic::Substitute.build
+  end
+end
+```
+
+</split>
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 791.73px; top: 0px; height: 839px; min-height: 839px; width: 597.27px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+- .build method creates operational instance
+<!-- .element: class="fragment" data-fragment-index="1" -->
+	- which is suppose to use on production
+<!-- .element: class="fragment" data-fragment-index="2" -->
+- while initializer creates operational instance
+<!-- .element: class="fragment" data-fragment-index="3" -->
+	- which is "safe"
+<!-- .element: class="fragment" data-fragment-index="4" -->
+	- is intended to use tests
+<!-- .element: class="fragment" data-fragment-index="5" -->
+- so we change our default behavior comparing to regular services
+<!-- .element: class="fragment" data-fragment-index="6" -->
+
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Let's write some tests :)`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchaseTest < Minitest::Test
+  def successful_scenario
+	create_purchase = CreatePurchase.new
+	
+```
+
+```	
+	create_purchase.ppolicy.create_purchase_permitted
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+```
+	create_purchase.form_builder.form_id_valid
+```
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+```
+	create_purchase.third_party_magic.it_succeed
+```
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+```
+	
+	user_id = SecureRandom.uuid
+	params = SomeParams.build
+	
+```
+<!-- .element: class="fragment" data-fragment-index="4" -->
+
+```
+	assert create_purchase.call(user_id, params)
+```
+<!-- .element: class="fragment" data-fragment-index="5" -->
+
+```
+	assert create_purchase.ppolicy.called_with?(:create_purchase, user_id: user_id)
+	assert create_purchase.third_party_magic.called?
+```
+<!-- .element: class="fragment" data-fragment-index="6" -->
+
+```
+	...
+  end
+end
+```
+</split>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `Let's write some tests :)`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchaseTest < Minitest::Test
+  def successful_scenario
+	create_purchase = CreatePurchase.new
+	
+```
+
+```
+	create_purchase.ppolicy.create_purchase_permitted
+	create_purchase.form_builder.form_id_valid
+	create_purchase.third_party_magic.it_succeed
+```
+<!-- .element: style="opacity: 0.2" -->
+
+
+```
+	
+	user_id = SecureRandom.uuid
+	params = SomeParams.build
+	
+	assert create_purchase.call(user_id, params)
+	assert create_purchase.ppolicy.called_with?(:create_purchase, user_id: user_id)
+	assert create_purchase.third_party_magic.called?
+	...
+  end
+end
+```
+</split>
+<br>
+
+### `sometimes it could introduces`
+### `Mystery Guest issue`
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Let's write some tests :)`
+
+
+
+<split no-margin gap="0" style="opacity:0.2">
+
+```ruby
+class CreatePurchaseTest < Minitest::Test
+  def successful_scenario
+	create_purchase = CreatePurchase.new
+	
+```
+
+```
+	create_purchase.ppolicy.create_purchase_permitted
+	create_purchase.form_builder.form_id_valid
+	create_purchase.third_party_magic.it_succeed
+	
+	user_id = SecureRandom.uuid
+	params = SomeParams.build
+	
+	assert create_purchase.call(user_id, params)
+	assert create_purchase.ppolicy.called_with?(:create_purchase, user_id: user_id)
+	assert create_purchase.third_party_magic.called?
+	...
+  end
+end
+```
+</split>
+<br>
+
+### `sometimes it could introduces`
+### `Mystery Guest issue`
+
+<div class="reset-margin" style="transform: rotate(-10deg); position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 1389px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/mystery-guest.png" alt="" style="width: 1200px"></img></p>
+
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 138.9px; top: 0px; height: 839px; min-height: 839px; width: 1389px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/qrcode-mystery-guest.png" alt="" style="width: 500px"></img></p>
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `More tests :D`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchaseTest < Minitest::Test
+  def third_party_magic_fails
+	create_purchase = CreatePurchase.new
+	
+```
+
+```
+	create_purchase.third_party_magic.it_will_fail
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+```
+	
+	user_id = SecureRandom.uuid
+	params = SomeParams.build
+	
+```
+<!-- .element: class="fragment" data-fragment-index="4" -->
+
+```
+	refute create_purchase.call(user_id, params)
+```
+<!-- .element: class="fragment" data-fragment-index="5" -->
+
+```
+	assert create_purchase.ppolicy.called_with?(:create_purchase, user_id: user_id)
+	assert create_purchase.third_party_magic.called?
+```
+<!-- .element: class="fragment" data-fragment-index="6" -->
+
+```
+	...
+  end
+end
+```
+</split>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+## `More. More! More!!! Tests!!!!!`
+
+
+
+<split no-margin gap="0">
+
+```ruby
+class CreatePurchaseTest < Minitest::Test
+  def unpermitted_action
+	create_purchase = CreatePurchase.new
+	
+```
+
+```
+	create_purchase.ppolicy.set_result(:create_purchase?, false)
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+```
+	
+	user_id = SecureRandom.uuid
+	params = SomeParams.build
+```
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+```
+
+	refute create_purchase.call(user_id, params)
+```
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+```
+	assert create_purchase.ppolicy.called_with?(:create_purchase, user_id: user_id)
+```
+<!-- .element: class="fragment" data-fragment-index="4" -->
+
+```
+	refute create_purchase.form_builder.called?
+	refute create_purchase.third_party_magic.called?
+```
+<!-- .element: class="fragment" data-fragment-index="5" -->
+
+```
+	...
+  end
+end
+```
+</split>
+
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## `Let's  summarize`
+
+
+<div class="reset-margin" style="position: absolute; left: 0px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Benefits`
+- Substitutes lives with implementation
+<!-- .element: class="fragment" data-fragment-index="1" -->
+- Centralised codebase for tests
+<!-- .element: class="fragment" data-fragment-index="2" -->
+- by default "safe" instance
+<!-- .element: class="fragment" data-fragment-index="3" -->
+	- you can build part of dependencies
+<!-- .element: class="fragment" data-fragment-index="3" -->
+- our design provides tools for testing
+<!-- .element: class="fragment" data-fragment-index="4" -->
+- No  DSL and just PORO
+<!-- .element: class="fragment" data-fragment-index="5" -->
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 0px; height: 839px; min-height: 839px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: start" >
+
+<br>
+<br>
+
+### `Drawbacks`
+  - Substitute vs ActiveRecord
+  <!-- .element: class="fragment" data-fragment-index="6" -->
+  - Substitute vs third party gems
+  <!-- .element: class="fragment" data-fragment-index="7" -->
+  - Substitute vs request_test in RSpec
+  <!-- .element: class="fragment" data-fragment-index="8" -->
+<br>
+<br>
+
+### `More Benefits`
+<!-- .element: class="fragment" data-fragment-index="9" -->
+- Substitute vs system libs (File)
+  <!-- .element: class="fragment" data-fragment-index="9" -->
+</div>
+
+<div class="reset-margin flex-even" style="position: absolute; left: 0px; top: 629.25px; height: 167.8px; min-height: 167.8px; width: 1389px; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly" >
+
+### `ActionMailer in test env is substitute` <!-- .element: style="background-color: #f28e22" -->
+<!-- .element: class="fragment" data-fragment-index="10" -->
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="presentations/v.jpg" -->
+
+
+## worth mentioning
+
+
+
+- Eventide Project DSLs:
+<!-- .element: class="fragment" data-fragment-index="1" -->
+	- dependency macro
+<!-- .element: class="fragment" data-fragment-index="2" -->
+	- configure macro
+<!-- .element: class="fragment" data-fragment-index="2" -->
+- Mimic as an Substitute
+<!-- .element: class="fragment" data-fragment-index="3" -->
+	- NullObect
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+
+<div class="reset-margin" style="position: absolute; left: 138.9px; top: 251.70000000000002px; height: 419.5px; min-height: 419.5px; width: 833.4000000000001px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/image-yt-utah-meetup.png" alt="" style="width: 800px" class="fragment" data-fragment-index="4"></img></p>
+
+</div>
+
+<div class="reset-margin" style="position: absolute; left: 694.5px; top: 251.70000000000002px; height: 419.5px; min-height: 419.5px; width: 694.5px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="presentations/qrcode-yt-utah-meetup.png" alt="" class="fragment" data-fragment-index="4"></img></p>
+
+</div>
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background-image="presentations/v.jpg" -->
+
+
+# Thank you
+
+
+
+</script></section></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+	if(isLight(bgColor)){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+        ],
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+
+		customcontrols: {
+			controls: [
+			]
+		},
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":"1389","height":"839","margin":"0","controls":true,"progress":true,"slideNumber":true,"transition":"fade","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
